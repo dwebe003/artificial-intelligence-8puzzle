@@ -24,14 +24,14 @@
 	2) Navigate to folder containing puzzleSolver.py (using cd commands)
 	3) Type what is contained in these quotations: "python puzzleSolver.py"
 	
-# Test cases:
+## Test cases:
 	Here are some test cases for you to try, other than the default:
 	
 	1 3 2		1 2 3		0 1 2		8 7 1		
 	4 8 0		4 8 0		4 5 3		6 0 2
 	7 5 6		7 6 5		7 8 6		5 4 3
 	
-	This one is impossible to solve, and the AI will evaluate every node (~100,000)
+	The one below is impossible to solve, and the AI will evaluate every node (~100,000)
 	before reporting failure.
 	
 	1 2 3

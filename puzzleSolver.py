@@ -21,6 +21,8 @@
 #########################################################################################
 
 import copy
+import time
+import sys
 
 GOALSEQ = [1, 2, 3, 4, 5, 6, 7, 8, 0]
 GOALIND = [(0, (2, 2)), (1, (0, 0)), (2, (0, 1)), (3, (0, 2)), (4, (1, 0)), (5, (1, 1)), (6, (1, 2)), (7, (2, 0)), (8, (2, 1))]
@@ -235,7 +237,7 @@ def goalFound(node, maxNodes, nodeDepth, count):
     print 'The maximum numbers of nodes in the queue at any one time was ', maxNodes, '.'
     print 'The depth of the goal node was ', nodeDepth, '.\n\n'
     
-    quit(1)
+    return
 
 ###########################################################################################################################
 
@@ -402,18 +404,24 @@ def getInput():
 
 def main():
 
-    print("\n\n\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-    print("~~~~ THE NAME OF OUR BAR.... PUZZLES. PEOPLE WILL BE LIKE ~~~~\n~~~~     \"WHY IS IT CALLED PUZZLES?\" THAT'S THE PUZZLE.   ~~~~")
-    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+	print("\n\n\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+	print("~~~~ THE NAME OF OUR BAR.... PUZZLES. PEOPLE WILL BE LIKE ~~~~\n~~~~     \"WHY IS IT CALLED PUZZLES?\" THAT'S THE PUZZLE.   ~~~~")
+	print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 
     #gets puzzle to solve
-    puzzle, choice = getInput()
+	puzzle, choice = getInput()
     
+	
     #runs through the search process
-    result = solvePuzzle(puzzle, choice)
+	start = time.clock()
+	result = solvePuzzle(puzzle, choice)
+	end = time.clock()
+	
+	algtime = end - start
+	
+	print 'This took ', str(algtime), ' seconds to complete.'
 
-
-    print("\n\n")
+	print("\n")
 
 if __name__ == '__main__':
 	main()
