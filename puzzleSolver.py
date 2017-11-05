@@ -5,8 +5,6 @@
 #   Date:       10/29/2017
 #   Version:    1.0
 #
-#   Class:      CS170 - Introduction to Artificial Intelligence
-#
 #   Algorithms: Uniform Cost Search
 #               A* with Manhattan
 #               A* with Misplaced Tile
