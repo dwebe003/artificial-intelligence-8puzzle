@@ -222,6 +222,21 @@ class Node:
 
 ###########################################################################################################################
 
+def checkGoal(self):
+	k = 0
+	for x in range(len(self.data)):
+		for y in range(len(self.data)):
+			if self.data[x][y] == GOALSEQ[k]:
+				status = 1
+			else:
+				status = 0
+				break
+				
+				
+
+
+###########################################################################################################################
+
 def f(node):
 	f = node.g_n + node.h_n
 	return f
